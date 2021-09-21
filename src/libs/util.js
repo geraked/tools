@@ -6,6 +6,11 @@ export default class Util {
         document.execCommand('copy');
     }
 
+    static select(element) {
+        element.select();
+        element.setSelectionRange(0, 99999);
+    }
+
     static addCss(url, id) {
         if (!document.getElementById(id)) {
             let head = document.getElementsByTagName('head')[0];

@@ -1,7 +1,7 @@
 import React from 'react'
 import Util from '../../libs/util'
 
-export const Eslah = ({ date, timeZone, updateModal }) => {
+export const Eslah = ({ date, timeZone, setModal }) => {
 
     // 1: good 2: bad
     const type = [2, 1, 2, 2, 1, 2, 1, 2, 2, 1, 2, 1, 2, 1, 1, 2, 1, 2, 1, 1, 1, 2, 1, 1, 1, 1, 2, 2, 2, 1];
@@ -56,7 +56,7 @@ export const Eslah = ({ date, timeZone, updateModal }) => {
     )
 
     return (
-        <div className="card bg-light" style={{ cursor: 'pointer' }} onClick={e => updateModal(modalTitle, modalBody)} data-bs-toggle="modal" data-bs-target="#calendar-modal">
+        <div className="card bg-light" style={{ cursor: 'pointer' }} onClick={e => setModal(modalTitle, modalBody)} data-bs-toggle="modal" data-bs-target="#calendar-modal">
             <div className="card-body py-5 px-1 px-md-3 d-flex flex-column align-items-center justify-content-center text-center">
                 <i className="fas fa-cut text-info"></i>
                 <h6>{modalTitle}</h6>

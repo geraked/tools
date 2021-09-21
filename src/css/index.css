@@ -59,6 +59,9 @@ body {
     font-size: 5rem;
     opacity: 0.1;
 }
+.card-body {
+    overflow: hidden;
+}
 /********************/
 
 /********** MainLayout **********/
@@ -112,9 +115,15 @@ body.night {
 }
 .night .form-control,
 .night .form-select {
-    color: #fff;
-    background-color: #263238;
-    border-color: #263238;
+    color: #fff !important;
+    background-color: #263238 !important;
+    border-color: #263238 !important;
+}
+.night .card .card .form-control,
+.night .card .card .form-select {
+    color: #fff !important;
+    background-color: #37474f !important;
+    border-color: #37474f !important;
 }
 .night .input-group-text {
     color: #fff;
@@ -146,7 +155,7 @@ body.night {
         font-size: 0.85rem;
     }
     #main-layout .main-card textarea {
-        height: calc((100vh - 16rem) / 2);
+        height: calc((100vh - 14rem) / 2);
     }
 }
 /********************/

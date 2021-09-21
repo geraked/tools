@@ -1,29 +1,29 @@
 import React from 'react'
 import Util from '../../libs/util'
 
-export const Zekr = ({ date, timeZone, updateModal }) => {
+const fa_weekdays = [
+    'شنبه',
+    'یکشنبه',
+    'دوشنبه',
+    'سه‌شنبه',
+    'چهارشنبه',
+    'پنجشنبه',
+    'جمعه',
+];
 
-    const fa_weekdays = [
-        'شنبه',
-        'یکشنبه',
-        'دوشنبه',
-        'سه‌شنبه',
-        'چهارشنبه',
-        'پنجشنبه',
-        'جمعه',
-    ];
+const weekdays = ["Sat", "Sun", "Mon", "Tue", "Wed", "Thu", "Fri"];
 
-    const weekdays = ["Sat", "Sun", "Mon", "Tue", "Wed", "Thu", "Fri"];
+const zekrs = [
+    'یا رَبَّ الْعالَمین',
+    'یا ذَالْجَلالِ وَالْاِکْرام',
+    'یا قاضِیَ الْحاجات',
+    'یا اَرْحَمَ الرّاحِمین',
+    'یا حَیُّ یا قَیّوم',
+    'لا اِلهَ اِلّا اللهُ الْمَلِکُ الْحَقُّ الْمُبین',
+    'اَللّهُمَّ صَلِّ عَلی مُحَمَّدٍ وَ آلِ مُحَمَّد',
+];
 
-    const zekrs = [
-        'یا رَبَّ الْعالَمین',
-        'یا ذَالْجَلالِ وَالْاِکْرام',
-        'یا قاضِیَ الْحاجات',
-        'یا اَرْحَمَ الرّاحِمین',
-        'یا حَیُّ یا قَیّوم',
-        'لا اِلهَ اِلّا اللهُ الْمَلِکُ الْحَقُّ الْمُبین',
-        'اَللّهُمَّ صَلِّ عَلی مُحَمَّدٍ وَ آلِ مُحَمَّد',
-    ];
+export const Zekr = ({ date, timeZone, setModal }) => {
 
     let o = {
         weekday: 'short',
@@ -43,7 +43,7 @@ export const Zekr = ({ date, timeZone, updateModal }) => {
     )
 
     return (
-        <div className="card bg-light" style={{ cursor: 'pointer' }} onClick={e => updateModal(modalTitle, modalBody)} data-bs-toggle="modal" data-bs-target="#calendar-modal">
+        <div className="card bg-light" style={{ cursor: 'pointer' }} onClick={e => setModal(modalTitle, modalBody)} data-bs-toggle="modal" data-bs-target="#calendar-modal">
             <div className="card-body py-5 px-1 px-md-3 d-flex flex-column align-items-center justify-content-center text-center">
                 <i className="fas fa-kaaba"></i>
                 <h6>{modalTitle}</h6>

@@ -7,7 +7,7 @@ import Util from './libs/util'
 import { Routes } from './Routes';
 
 import 'bootstrap/dist/css/bootstrap.rtl.min.css';
-import '@fortawesome/fontawesome-free/css/all.css';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 import './fonts/iransans.css';
 import './css/index.css';
 import 'bootstrap/dist/js/bootstrap.bundle';
