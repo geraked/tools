@@ -1,4 +1,4 @@
-## Create Project
+## Create Empty Project
 
 ```
 npx create-react-app my-app --use-npm --template cra-template-pwa
@@ -24,6 +24,14 @@ Inside that directory, you can run several commands:
     and scripts into the app directory. If you do this, you can’t go back!
 ```
 
-## Docs
+## Demo
 
-[https://create-react-app.dev/docs](https://create-react-app.dev/docs)
+View the online [Demo](https://tools.geraked.ir/).
+
+## Author
+
+**Rabist** - view on [LinkedIn](https://www.linkedin.com/in/rabist)
+
+## License
+
+Licensed under [MIT](LICENSE).
