@@ -11,6 +11,8 @@ import Home from './pages/Home'
 import TextCleaner from './pages/TextCleaner'
 import DigitConverter from './pages/DigitConverter'
 import Calendar from './pages/Calendar'
+import SpaceRemover from './pages/SpaceRemover'
+import PythonCleaner from './pages/PythonCleaner'
 
 const items = [
     {
@@ -31,6 +33,18 @@ const items = [
         component: <Calendar />,
         icon: <i className="fas fa-calendar-alt text-success"></i>
     },
+    {
+        path: '/rmspace',
+        title: 'حذف‌کننده فاصله‌ها',
+        component: <SpaceRemover />,
+        icon: <i className="fas fa-eraser text-info"></i>
+    },
+    {
+        path: '/cleanpy',
+        title: 'تمیزکننده پایتون',
+        component: <PythonCleaner />,
+        icon: <i className="fas fa-indent text-warning"></i>
+    },    
 ];
 
 export const Routes = () =>

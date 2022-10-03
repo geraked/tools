@@ -55,4 +55,30 @@ export default class Util {
         ar_digits.forEach((n, i) => str = str.replaceAll(n, en_digits[i]));
         return str;
     }
+
+    static removeExteraSpaces(str) {
+        str = str.trim();
+        str = str.replace(/[\u00AD\u200F\u00AC]/g, '\u200C'); // half-space
+        str = str.replace(/[\v\f\r \u00a0\u2000-\u200b\u2028-\u2029\u3000]+/g, ' ');
+        str = str.replace(/[\u200C]+/g, '\u200C');
+        return str;
+    }
+
+    static removeSpaces(str) {
+        str = str.replace(/[\n]/g, ' ');
+        str = this.removeExteraSpaces(str);
+        return str;
+    }
+
+    static isLTR(str) {
+        str = str.replace(/\s/g, '');
+        let re = /[\w۰۱۲۳۴۵۶۷۸۹.:?,;'"!`#$%^&*()-_=+]/g;
+        let cnt = ((str || '').match(re) || []).length;
+        return (cnt / str.length) >= 0.5;
+    }
+
+    static cleanPython(str) {
+        str = str.replace(/[>.]{3} ?/g, '');
+        return str;
+    }
 }

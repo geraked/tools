@@ -9,6 +9,7 @@ export default class DigitConverter extends Component {
         this.state = {
             persian: '',
             english: '',
+            dir: 'rtl',
         };
 
         this.handleChange = this.handleChange.bind(this);
@@ -19,6 +20,7 @@ export default class DigitConverter extends Component {
         this.setState({
             persian: Util.toPersianDigits(val),
             english: Util.toEnglishDigits(val),
+            dir: Util.isLTR(val) ? 'ltr' : 'rtl',
         });
     }
 
@@ -35,7 +37,7 @@ export default class DigitConverter extends Component {
                                 <CopyBtn targetId='persian-txt' />
                             </div>
                         </div>
-                        <textarea className="form-control" onChange={this.handleChange} value={this.state.persian} id="persian-txt"></textarea>
+                        <textarea className="form-control" dir={this.state.dir} onChange={this.handleChange} value={this.state.persian} id="persian-txt"></textarea>
                     </div>
                 </div>
                 <div className="col-md-6">
@@ -48,7 +50,7 @@ export default class DigitConverter extends Component {
                                 <CopyBtn targetId='english-txt' />
                             </div>
                         </div>
-                        <textarea className="form-control" onChange={this.handleChange} value={this.state.english} id="english-txt"></textarea>
+                        <textarea className="form-control" dir={this.state.dir} onChange={this.handleChange} value={this.state.english} id="english-txt"></textarea>
                     </div>
                 </div>
             </div>
